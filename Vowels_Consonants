@@ -1,0 +1,19 @@
+function VowelsConsonants {
+Param ([string]$word) 
+
+    $VowelList = 'a','e','i','o','u'                                                                     #List of vowels
+    $ConsonantList = 'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z' #List of Consonants
+
+      $Vowels = 0
+      $Consonants = 0
+
+        $Word.ToCharArray() | ForEach-Object {
+
+if ($_ -in $VowelList) {$Vowels++}                                                                   #Count vowels in word/phrase
+elseif ($_ -in $ConsonantList) {$Consonants++}                                                       #Count consonants "        "
+}
+
+return "Vowels = $Vowels, Consonants = $Consonants"
+}              
+
+VowelsConsonants -Word "Mynameisjack"                                                                #Word to have vowels and consonants counted
