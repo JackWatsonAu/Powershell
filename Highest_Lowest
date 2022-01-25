@@ -1,0 +1,8 @@
+function Get-Integers{
+
+    $a = [array]20,80,16,53,46                              #Listed array of numbers
+    $a | measure-object -Maximum -Minimum -Sum              #Measuring object of highest and lowest numbers
+
+}
+
+Get-Integers | Format-Table                             #Formatting table horizontally
