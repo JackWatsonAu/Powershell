@@ -1,0 +1,11 @@
+function AgeInDays{
+
+    $birthday = Get-Date -Date '1982-09-19' #Get-Date my birthday
+    $today = Get-Date                       #Get-Date today's day
+    $TimeSpan = $today - $birthday          #Span of time between today and my birthday
+
+return $Timespan.days
+
+}
+
+AgeInDays | Format-Table
